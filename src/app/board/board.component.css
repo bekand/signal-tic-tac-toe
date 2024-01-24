@@ -1,0 +1,20 @@
+.board {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-area: board;
+}
+
+.announce {
+	text-align: center;
+	grid-area: announce;
+	margin: 10%;
+	font: 2em sans-serif;
+}
+
+:host {
+	display: grid;
+	grid-template-areas: 
+	"announce announce announce "
+	" . board .";
+}

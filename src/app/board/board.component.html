@@ -1,0 +1,15 @@
+<div class="announce">
+	@if (gameWon()) {
+		Game over. {{winner()}}
+	<button (click)="resetGame()" aria-label="reset"> Reset Game </button>
+	} @else if(lastMoved()) {
+		Game in progress. <br> Last moved: {{lastMoved()}}
+	} @else {
+		Make the first move!
+	}
+</div>
+<div class="board">
+	@for (square of [1, 2, 3, 4, 5, 6, 7 ,8, 9]; track $index) {
+		<app-square [gameWon]="gameWon()" [index]="$index" (clicked)="squareClicked($event)"></app-square>
+	}
+</div>

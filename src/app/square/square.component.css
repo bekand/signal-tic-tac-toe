@@ -1,0 +1,13 @@
+:host {
+	padding: 1px;
+}
+
+.square {
+	background-color: cadetblue;
+	height: 2em;
+	width: 2em;
+	font: 4em sans-serif;
+	padding: 2px;
+	cursor: pointer;
+	color: whitesmoke;
+}
